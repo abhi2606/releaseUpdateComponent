@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Profiles__c</fullName>
+    <description>Stores the profiles</description>
+    <externalId>false</externalId>
+    <label>Profiles</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Standard User</fullName>
+                <default>false</default>
+                <label>Standard User</label>
+            </value>
+            <value>
+                <fullName>Marketing User</fullName>
+                <default>false</default>
+                <label>Marketing User</label>
+            </value>
+            <value>
+                <fullName>Custom: Sales Profile</fullName>
+                <default>false</default>
+                <label>Custom: Sales Profile</label>
+            </value>
+            <value>
+                <fullName>Custom: Support Profile</fullName>
+                <default>false</default>
+                <label>Custom: Support Profile</label>
+            </value>
+            <value>
+                <fullName>Custom: Marketing Profile</fullName>
+                <default>false</default>
+                <label>Custom: Marketing Profile</label>
+            </value>
+            <value>
+                <fullName>Contract Manager</fullName>
+                <default>false</default>
+                <label>Contract Manager</label>
+            </value>
+            <value>
+                <fullName>Read Only</fullName>
+                <default>false</default>
+                <label>Read Only</label>
+            </value>
+            <value>
+                <fullName>Solution Manager</fullName>
+                <default>false</default>
+                <label>Solution Manager</label>
+            </value>
+            <value>
+                <fullName>Standard Platform User</fullName>
+                <default>false</default>
+                <label>Standard Platform User</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

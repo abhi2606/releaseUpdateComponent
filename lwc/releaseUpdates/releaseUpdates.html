@@ -1,0 +1,60 @@
+<template>
+  <div class="slds-brand-band slds-brand-band_none">
+    <lightning-card  variant="base" icon-name="utility:announcement">
+      <div slot="title">
+          Release Updates
+      </div>
+      <div class="slds-card__body slds-card__body_inner">
+        <div>
+          
+          <template for:each={releaseNotes} for:item="rec">
+            <div key={rec.Id}>
+              <lightning-card variant="base">
+                <div class="slds-card__body slds-card__body_inner">
+                    
+                  <div class="slds-grid">
+                    <div class="">
+                      <lightning-icon icon-name="custom:custom17" alternative-text="Updates" size="xx-small" title="small size">
+                      </lightning-icon>
+                    </div>
+                    <div class="slds-text-heading_small slds-m-left_x-small">
+                      <strong>{rec.Title__c}</strong>
+                    </div>
+                  </div>
+                  
+                  <div class="">
+                    <lightning-badge label={rec.Profiles__c} icon-name="standard:event"></lightning-badge>
+                    <lightning-badge label={rec.Country__c} icon-name="custom:custom11"></lightning-badge>
+                  </div>
+                  <div class="slds-m-left_x-small">
+                    <strong>{rec.Description__c}</strong>
+                      <lightning-formatted-url 
+                        value={rec.External_Link__c}
+                        tooltip="Use https://domain-name"
+                        label="Visit"
+                        target="_blank"
+                      ></lightning-formatted-url>
+                  <div>
+                    <template for:each={rec.ContentDocumentLinks} for:item="file">
+                        <lightning-button 
+                          variant="brand"
+                          label={file.ContentDocument.Title} 
+                          key={file.ContentDocumentId}
+                          data-id={file.ContentDocumentId}
+                          onclick={handlePreview}
+                        ></lightning-button>
+                    </template>
+                </div>
+                  </div>
+              </div>
+              </lightning-card>
+            </div>
+          </template>
+        </div>
+      </div>
+      
+    </lightning-card>
+    
+  </div>
+</template>
+
